@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Insights | Institutional & Notable Investor Activity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22V8" />
+                <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
+                <path d="M22 4V2" />
+                <path d="M2 4V2" />
+                <path d="M12 2v6" />
+                <path d="M19 8l-7 6-7-6" />
+            </svg>
+            <span>InsiderPulse</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Watchlist</a></li>
+                <li><a href="#">Insights</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search stocks, investors, or companies...">
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="card-header">Top Watched Stocks</div>
+                <div class="card-body">
+                    <div class="filter-container">
+                        <div class="filter-pill active">All</div>
+                        <div class="filter-pill">Tech</div>
+                        <div class="filter-pill">Finance</div>
+                        <div class="filter-pill">Healthcare</div>
+                        <div class="filter-pill">Energy</div>
+                    </div>
+                    <div class="stock-list">
+                        <div class="stock-item" data-symbol="AAPL" data-name="Apple Inc." data-sector="Technology">
+                            <div class="stock-symbol">AAPL</div>
+                            <div class="stock-name">Apple Inc.</div>
+                            <div class="investors">
+                                <div class="investor-badge">Warren Buffett</div>
+                                <div class="investor-badge">BlackRock</div>
+                            </div>
+                        </div>
+                        <div class="stock-item" data-symbol="TSLA" data-name="Tesla, Inc." data-sector="Automotive">
+                            <div class="stock-symbol">TSLA</div>
+                            <div class="stock-name">Tesla, Inc.</div>
+                            <div class="investors">
+                                <div class="investor-badge">Cathie Wood</div>
+                                <div class="investor-badge">Vanguard</div>
+                            </div>
+                        </div>
+                        <div class="stock-item" data-symbol="MSFT" data-name="Microsoft Corporation"
+                            data-sector="Technology">
+                            <div class="stock-symbol">MSFT</div>
+                            <div class="stock-name">Microsoft Corporation</div>
+                            <div class="investors">
+                                <div class="investor-badge">Bill Gates</div>
+                                <div class="investor-badge">State Street</div>
+                            </div>
+                        </div>
+                        <div class="stock-item" data-symbol="NVDA" data-name="NVIDIA Corporation"
+                            data-sector="Technology">
+                            <div class="stock-symbol">NVDA</div>
+                            <div class="stock-name">NVIDIA Corporation</div>
+                            <div class="investors">
+                                <div class="investor-badge">Jensen Huang</div>
+                                <div class="investor-badge">Fidelity</div>
+                            </div>
+                        </div>
+                        <div class="stock-item" data-symbol="AMZN" data-name="Amazon.com, Inc."
+                            data-sector="E-commerce">
+                            <div class="stock-symbol">AMZN</div>
+                            <div class="stock-name">Amazon.com, Inc.</div>
+                            <div class="investors">
+                                <div class="investor-badge">Jeff Bezos</div>
+                                <div class="investor-badge">Capital Group</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stock-details card">
+                <div class="card-header">Stock Analysis</div>
+                <div class="card-body">
+                    <div class="stock-header">
+                        <div>
+                            <h2>NVDA - NVIDIA Corporation</h2>
+                            <p>Technology • Semiconductors</p>
+                        </div>
+                        <div class="stock-price-info">
+                            <span class="stock-price">$1,225.37</span>
+                            <span class="price-change positive">+32.14 (2.69%)</span>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <div class="chart-placeholder">Stock price chart will be displayed here</div>
+                    </div>
+
+                    <div class="tabs">
+                        <div class="tab active" data-tab="insider">Insider Activity</div>
+                        <div class="tab" data-tab="stats">Key Statistics</div>
+                        <div class="tab" data-tab="news">News & Analysis</div>
+                    </div>
+
+                    <div class="tab-content active" id="insider-content">
+                        <div class="investor-activity">
+                            <div class="activity-item">
+                                <div class="investor-avatar">JH</div>
+                                <div class="activity-details">
+                                    <div class="investor-name">Jensen Huang</div>
+                                    <div class="activity-type">CEO & Founder • Insider Trading</div>
+                                    <div class="activity-date">March 1, 2025</div>
+                                </div>
+                                <div class="activity-amount buy">+25,000 shares</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="investor-avatar">BF</div>
+                                <div class="activity-details">
+                                    <div class="investor-name">BlackRock Fund</div>
+                                    <div class="activity-type">Institutional Investor</div>
+                                    <div class="activity-date">February 22, 2025</div>
+                                </div>
+                                <div class="activity-amount buy">+1,250,000 shares</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="investor-avatar">CW</div>
+                                <div class="activity-details">
+                                    <div class="investor-name">Cathie Wood (ARK Invest)</div>
+                                    <div class="activity-type">Fund Manager</div>
+                                    <div class="activity-date">February 15, 2025</div>
+                                </div>
+                                <div class="activity-amount buy">+345,600 shares</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="investor-avatar">TC</div>
+                                <div class="activity-details">
+                                    <div class="investor-name">Timothy Chen</div>
+                                    <div class="activity-type">Director • Insider Trading</div>
+                                    <div class="activity-date">February 8, 2025</div>
+                                </div>
+                                <div class="activity-amount sell">-12,500 shares</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="stats-content">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-label">Market Cap</div>
+                                <div class="stat-value">$3.02T</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">P/E Ratio</div>
+                                <div class="stat-value">74.23</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Revenue (TTM)</div>
+                                <div class="stat-value">$54.5B</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">EPS (TTM)</div>
+                                <div class="stat-value">$16.51</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">52-Week High</div>
+                                <div class="stat-value">$1,235.00</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">52-Week Low</div>
+                                <div class="stat-value">$420.18</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Dividend Yield</div>
+                                <div class="stat-value">0.03%</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Beta</div>
+                                <div class="stat-value">1.72</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="news-content">
+                        <div class="news-list">
+                            <div class="news-item">
+                                <div class="news-date">March 8, 2025</div>
+                                <div class="news-title">NVIDIA Announces New AI Chip with 2x Performance Gains</div>
+                                <div class="news-source">TechCrunch</div>
+                                <div class="news-summary">NVIDIA unveiled its next-generation AI chip that promises
+                                    double the performance of its predecessor, potentially further cementing its
+                                    dominance in the AI hardware market.</div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-date">March 5, 2025</div>
+                                <div class="news-title">Analysts Raise NVIDIA Price Targets Following CEO's Stock
+                                    Purchase</div>
+                                <div class="news-source">Bloomberg</div>
+                                <div class="news-summary">Several Wall Street analysts have raised their price targets
+                                    for NVIDIA following CEO Jensen Huang's recent purchase of 25,000 shares, citing it
+                                    as a bullish signal.</div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-date">February 28, 2025</div>
+                                <div class="news-title">NVIDIA Partners with Major Cloud Providers on Next-Gen AI
+                                    Infrastructure</div>
+                                <div class="news-source">Reuters</div>
+                                <div class="news-summary">NVIDIA announced new partnerships with AWS, Google Cloud, and
+                                    Microsoft Azure to deploy its latest AI infrastructure solutions, potentially
+                                    driving significant revenue growth.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <div class="card">
+                <div class="card-header">Ask AI Assistant</div>
+                <div class="card-body">
+                    <div class="chat-interface">
+                        <div class="chat-messages">
+                            <div class="message">
+                                <div class="message-header">AI Assistant</div>
+                                <div class="message-content">
+                                    Hello! I can help you analyze stock data and insider trading patterns. What would
+                                    you like to know about NVIDIA or any other stock?
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-input-container">
+                            <textarea class="chat-input"
+                                placeholder="Ask anything about stocks, investors, or market trends..."></textarea>
+                            <button class="send-button">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
